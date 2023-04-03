@@ -1,0 +1,6 @@
+use("sample_training")
+
+//find
+db.zips.find({ state: "NY"})
+//count
+//db.zips.find({ state: "NY"}).count()
