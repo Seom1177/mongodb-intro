@@ -1,0 +1,4 @@
+use("SeomStore")
+
+//find
+db.Products.find()
