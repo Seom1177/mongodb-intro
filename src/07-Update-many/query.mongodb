@@ -1,0 +1,5 @@
+use("sample_training")
+
+db.zips.find({city:"CLEVELAND"})//.count()
+// 2369
+// 1244
