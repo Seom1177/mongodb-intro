@@ -1,0 +1,15 @@
+use("seom_store")
+
+db.products.updateOne(
+    // query
+    //{_id: "642d7748bdaf87e9b1b03804"}, //Don't work
+    {_id: ObjectId("642d7748bdaf87e9b1b03804")},
+    // change => operators
+    {
+        $inc: {
+            price: 30
+        }
+    }
+)
+///642d7748bdaf87e9b1b03804
+db.products.find()

@@ -1,0 +1,17 @@
+use("seom_store")
+db.products.update(
+    // query
+    {_id: 2}, 
+    // change => operators
+    {
+        $set: {
+            name:"Change name",
+            price: 300,
+            tags: [
+                'A',
+                'B',
+                'C'
+            ]
+        }
+    }
+)

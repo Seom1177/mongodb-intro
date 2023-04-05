@@ -1,0 +1,11 @@
+use("seom_store")
+db.products.update(
+    // query
+    {_id: 4}, 
+    // change => operators
+    {
+        $inc: {
+            price: 30000
+        }
+    }
+)
