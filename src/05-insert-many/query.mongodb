@@ -1,0 +1,3 @@
+use("seom_store")
+
+db.products.find()
