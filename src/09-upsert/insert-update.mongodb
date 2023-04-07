@@ -1,0 +1,30 @@
+use("seom_store")
+
+db.iot.find({
+    sensor: "A001",
+    date: "2023-04-07",
+}).count()
+db.iot.insertOne({
+    sensor: "A001",
+    date: "2023-04-07",
+    readings: [1212]
+})
+
+// db.iot.updateOne({
+//     sensor: "A001",
+//     date: "2023-04-07",
+// },{
+//     $pop:{
+//         readings: 1 //delete last element
+//     }
+// }
+// )
+
+db.iot.updateOne({
+    sensor: "A001",
+    date: "2023-04-07",
+},{
+    $push:{
+        readings:[2323]
+    }
+})

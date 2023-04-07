@@ -1,0 +1,2 @@
+use("seom_store")
+db.iot.find()
