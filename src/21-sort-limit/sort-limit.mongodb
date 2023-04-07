@@ -1,0 +1,15 @@
+use("sample_training")
+
+// 1 order by asc a->z
+// -1 order by desc z->a
+db.zips
+    .find({ pop: {$gte:100} })
+    .sort({ pop: -1})
+    .limit(2)
+
+/**
+ * .sort() => para ordenar los doc, con un 1 de menor a mayor o de la A a la Z y con un -1 al contrario ( 10-0, Z-A).
+ * .limit() => Limita la cantidad de doc que queremos traer, ej: .limit(3) trae 3 docs.
+ * .skip() => indica desde que posición nos traera los doc, ej: en una lista del 1 al 10; .skip(3) nos da los doc desde el 4 hasta el 10.
+ * .limit(0) => no da 0 documentos sino antes todos los documentos de la colección que cumplan las condiciones de la consulta.
+*/
