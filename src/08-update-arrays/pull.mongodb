@@ -1,0 +1,26 @@
+use("seom_store")
+// Remove one element from data array
+//  db.inventory.updateMany(
+//     {
+//        // _id:4
+//     },
+//     {
+//         $pull:{
+//             tags: "book"
+//         }
+//     }
+// )
+
+// remove others elements from array
+ db.inventory.updateMany(
+    {
+       // _id:4
+    },
+    {
+        $pull:{
+            tags: {
+                $in: ["appliance","school"]
+            }
+        }
+    }
+)
